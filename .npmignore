@@ -1,0 +1,7 @@
+.*
+*.md
+*.yml
+.idea
+build/
+node_modules/
+test/

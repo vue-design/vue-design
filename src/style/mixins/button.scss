@@ -1,0 +1,29 @@
+
+@mixin btn-color($color, $background, $border){
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+}
+
+@mixin btn-size($padding, $font-size, $border-radius){
+  padding: $padding;
+  font-size: $font-size;
+  border-radius: $border-radius;
+}
+
+@mixin btn-variant($color, $background, $border){
+  @include btn-color($color, $background, $border);
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include btn-color($btn-disable-color, $btn-disable-bg, $btn-disable-border);
+    }
+  }
+}

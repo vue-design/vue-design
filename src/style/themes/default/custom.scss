@@ -1,0 +1,113 @@
+// Iconfont
+$css-prefix            : v;
+$css-iconfont-icon       : icon;
+
+// Color
+$primary-color          : #0099e5;
+$info-color             : #2db7f5;
+$success-color          : #5cb85c;
+$error-color            : #ff5500;
+$warning-color          : #f0ad4e;
+$link-color             : #0099e5;
+$link-hover-color       : lighten($link-color, 20%);
+$link-active-color      : darken($link-color, 5%);
+
+// Base
+$body-background        : #fff;
+$font-family            : "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+$code-family            : Consolas,Menlo,Courier,monospace;
+$text-color             : #525558;
+$font-size-base         : 14px;
+$line-height-base       : 1.5;
+$line-height-computed   : floor(($font-size-base * $line-height-base));
+$border-radius-base     : 6px;
+$border-radius-small    : 4px;
+$cursor-disabled        : not-allowed;
+
+// Border color
+$border-color-base      : #d9d9d9;  // outside
+$border-color-split     : #e9e9e9;  // inside
+
+// Background color
+$background-color-base  : #f7f7f7;  // base
+
+// Shadow
+$shadow-color           : rgba(100, 100, 100, .2);
+$shadow-base            : 0 1px 6px $shadow-color;
+$shadow-card            : 0 1px 1px 0 rgba(0,0,0,.1);
+$shadow-up              : 0 -1px 6px $shadow-color;
+$shadow-down            : $shadow-base;
+$shadow-left            : -1px 0 6px $shadow-color;
+$shadow-right           : 1px 0 6px $shadow-color;
+
+// Button
+$btn-font-weight        : normal;
+$btn-padding-base       : 5px 13px;
+$btn-padding-large      : 6px 15px;
+$btn-padding-small      : 2px 7px;
+$btn-font-size          : 12px;
+$btn-font-size-large    : 14px;
+$btn-border-radius      : 4px;
+$btn-border-radius-small: 3px;
+
+$btn-disable-color      : #c3cbd6;
+$btn-disable-bg         : $background-color-base;
+$btn-disable-border     : $border-color-base;
+
+$btn-default-color      : $text-color;
+$btn-default-bg         : $background-color-base;
+$btn-default-border     : $border-color-base;
+
+$btn-primary-color      : #fff;
+$btn-primary-bg         : $primary-color;
+
+//$btn-ghost-color        : $text-color;
+//$btn-ghost-bg           : transparent;
+//$btn-ghost-border       : $border-color-base;
+
+$btn-circle-size        : 28px;
+$btn-circle-size-large  : 32px;
+$btn-circle-size-small  : 22px;
+
+// Layout and Grid
+$grid-columns           : 12;
+$grid-gutter-width      : 30px;
+$grid-min-width         : 1000px;
+
+// Legend
+$legend-color           : #999;
+
+// Input
+$input-height-base           : 28px;
+$input-height-large          : 32px;
+$input-height-small          : 22px;
+
+$input-padding-horizontal    : 7px;
+$input-padding-vertical-base : 4px;
+$input-padding-vertical-small: 1px;
+$input-padding-vertical-large: 6px;
+
+$input-placeholder-color     : #ccc;
+$input-color                 : $text-color;
+$input-border-color          : $border-color-base;
+$input-bg                    : #fff;
+
+$input-hover-border-color    : $primary-color;
+$input-focus-border-color    : $primary-color;
+$input-disabled-bg           : #f3f3f3;
+
+// Tag
+$tag-font-size          : 12px;
+
+// Z-index
+$zindex-spin            : 8;
+$zindex-affix           : 10;
+$zindex-back-top        : 10;
+$zindex-modal           : 1000;
+$zindex-message         : 1010;
+$zindex-notification    : 1010;
+$zindex-loading-bar     : 2000;
+
+// Animation
+$animation-time         : .3s;
+$transition-time        : .2s;

@@ -1,0 +1,21 @@
+
+@include make-animation(rotateLeft, vueRotateLeft, linear,1s);//for loading
+@include make-animation(rotateRight, vueRotateRight, linear, 1s);
+
+@include keyframes(vueRotateLeft){
+  from {
+    @include transform(rotate(0deg));
+  }
+  to{
+    @include transform(rotate(360deg));
+  }
+}
+
+@include keyframes(vueRotateRight){
+  from {
+    @include transform(rotate(360deg));
+  }
+  to{
+    @include transform(rotate(0deg));
+  }
+}

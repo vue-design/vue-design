@@ -1,0 +1,372 @@
+
+.#{$css-prefix}-btn{
+  display: inline-block;
+  margin-bottom: 0; // For input.btn
+  font-weight: $btn-font-weight;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 1px solid transparent;
+  white-space: nowrap;
+  @include btn-size($btn-padding-base, $btn-font-size, $btn-border-radius);
+  @include user-select(none);
+  @include transform(translate3d(0, 0, 0));
+  @include transition(all $transition-time linear);
+
+  &,
+  &:active,
+  &:focus {
+    outline: 0;
+  }
+
+  &.disabled,
+  &[disabled] {
+    cursor: $cursor-disabled;
+    > * {
+      pointer-events: none;
+    }
+  }
+}
+
+.#{$css-prefix}-btn{
+
+  &-small{
+    @include btn-size($btn-padding-small, $btn-font-size, $btn-border-radius-small);
+  }
+
+  &-large{
+    @include btn-size($btn-padding-large, $btn-font-size-large, $btn-border-radius);
+  }
+
+  &-block{
+    display: block;
+  }
+
+  &-radius-half {
+    border-radius: $btn-circle-size;
+
+    @at-root (without: all) {.#{$css-prefix}-btn-large#{&}{
+      border-radius: $btn-circle-size-small;
+    }}
+
+    @at-root (without: all) {.#{$css-prefix}-btn-small#{&}{
+      border-radius: $btn-circle-size-small;
+    }}
+  }
+
+  &-radius-all {
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    @at-root (without: all) {.#{$css-prefix}-btn-large#{&}{
+      width: 36px;
+      height: 36px;
+    }}
+
+    @at-root (without: all) {.#{$css-prefix}-btn-small#{&}{
+      width: 23px;
+      height: 23px;
+    }}
+  }
+
+  &-radius-none {
+    border-radius: 0;
+  }
+
+  &-default{
+    @include btn-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+    &:hover{
+      @include btn-color(lighten($primary-color, 20%), $btn-primary-color, lighten($primary-color, 20%));
+    }
+
+    &.active,
+    &:active{
+      @include btn-color(darken($primary-color, 5%), $btn-primary-color, darken($primary-color, 5%));
+    }
+
+    &-success{
+      @include btn-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+      &:hover{
+        @include btn-color($success-color, $btn-primary-color, $success-color);
+      }
+
+      &.active,
+      &:active{
+        @include btn-color(darken($success-color, 5%), $btn-primary-color, darken($success-color, 5%));
+      }
+    }
+
+    &-error{
+      @include btn-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+      &:hover{
+        @include btn-color($error-color, $btn-primary-color, $error-color);
+      }
+
+      &.active,
+      &:active{
+        @include btn-color(darken($error-color, 10%), $btn-primary-color, darken($error-color, 10%));
+      }
+    }
+
+    &-warning{
+      @include btn-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+      &:hover{
+        @include btn-color($warning-color, $btn-primary-color, $warning-color);
+      }
+
+      &.active,
+      &:active{
+        @include btn-color(darken($warning-color, 10%), $btn-primary-color, darken($warning-color, 10%));
+      }
+    }
+
+    &-info{
+      @include btn-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+      &:hover{
+        @include btn-color($info-color, $btn-primary-color, $info-color);
+      }
+
+      &.active,
+      &:active{
+        @include btn-color(darken($info-color, 10%), $btn-primary-color, darken($info-color, 10%));
+      }
+    }
+  }
+
+
+  &-primary{
+    @include btn-variant($btn-primary-color, $btn-primary-bg, $primary-color);
+    &:hover{
+      @include btn-color($btn-primary-color, lighten($btn-primary-bg, 20%), lighten($primary-color, 20%));
+    }
+    &.active,
+    &:active{
+      @include btn-color($btn-primary-color, darken($btn-primary-bg, 20%), darken($primary-color, 20%));
+    }
+
+    &-success{
+      @include btn-variant($btn-primary-color, $success-color, $success-color);
+      &:hover{
+        @include btn-color($btn-primary-color, lighten($success-color, 20%), lighten($success-color, 20%));
+      }
+
+      &.active,
+      &:active{
+        @include btn-color($btn-primary-color, darken($success-color, 20%), darken($success-color, 20%));
+      }
+    }
+
+    &-error{
+      @include btn-variant($btn-primary-color, $error-color, $error-color);
+      &:hover{
+        @include btn-color($btn-primary-color, lighten($error-color, 20%), lighten($error-color, 20%));
+      }
+
+      &.active,
+      &:active{
+        @include btn-color($btn-primary-color, darken($error-color, 20%), darken($error-color, 20%));
+      }
+    }
+
+    &-warning{
+      @include btn-variant($btn-primary-color, $warning-color, $warning-color);
+      &:hover{
+        @include btn-color($btn-primary-color, lighten($warning-color, 20%), lighten($warning-color, 20%));
+      }
+
+      &.active,
+      &:active{
+        @include btn-color($btn-primary-color, darken($warning-color, 20%), darken($warning-color, 20%));
+      }
+    }
+
+    &-info{
+      @include btn-variant($btn-primary-color, $info-color, $info-color);
+      &:hover{
+        @include btn-color($btn-primary-color, lighten($info-color, 20%), lighten($info-color, 20%));
+      }
+
+      &.active,
+      &:active{
+        @include btn-color($btn-primary-color, darken($info-color, 20%), darken($info-color, 20%));
+      }
+    }
+
+
+  }
+
+  &-loading {
+    pointer-events: none;
+    position: relative;
+
+    &:before {
+      display: block;
+    }
+  }
+
+}
+
+.#{$css-prefix}-btn-group{
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: $btn-border-radius;
+  overflow: hidden;
+  @include clearfix();
+
+  > .#{$css-prefix}-btn{
+    float: left;
+    position: relative;
+    z-index: 2;
+
+    &:first-child{
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    &:last-child{
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+    }
+
+    &:not(:first-child){
+      margin-left: -1px;
+    }
+
+    &:not(:first-child):not(:last-child){
+      border-radius: 0;
+    }
+    &:not(:first-child):not(:last-child){}
+
+    &:hover,
+    &.active,
+    &:active{
+      z-index: 3;
+    }
+
+  }
+
+  > .#{$css-prefix}-btn-primary{
+    &:not(:first-child):not(last-child){
+      border-left-color: darken($primary-color, 5%);
+      border-right-color: darken($primary-color, 5%);
+    }
+    &:first-child{
+      border-right-color: darken($primary-color, 5%);
+    }
+    &:last-child{
+      border-left-color: darken($primary-color, 5%);
+    }
+
+    &-success{
+      &:not(:first-child):not(last-child){
+        border-left-color: darken($success-color, 5%);
+        border-right-color: darken($success-color, 5%);
+      }
+      &:first-child{
+        border-right-color: darken($success-color, 5%);
+      }
+      &:last-child{
+        border-left-color: darken($success-color, 5%);
+      }
+    }
+
+    &-warning{
+      &:not(:first-child):not(last-child){
+        border-left-color: darken($warning-color, 5%);
+        border-right-color: darken($warning-color, 5%);
+      }
+      &:first-child{
+        border-right-color: darken($warning-color, 5%);
+      }
+      &:last-child{
+        border-left-color: darken($warning-color, 5%);
+      }
+    }
+
+    &-error{
+      &:not(:first-child):not(last-child){
+        border-left-color: darken($error-color, 5%);
+        border-right-color: darken($error-color, 5%);
+      }
+      &:first-child{
+        border-right-color: darken($error-color, 5%);
+      }
+      &:last-child{
+        border-left-color: darken($error-color, 5%);
+      }
+    }
+
+    &-info{
+      &:not(:first-child):not(last-child){
+        border-left-color: darken($info-color, 5%);
+        border-right-color: darken($info-color, 5%);
+      }
+      &:first-child{
+        border-right-color: darken($info-color, 5%);
+      }
+      &:last-child{
+        border-left-color: darken($info-color, 5%);
+      }
+    }
+
+  }
+
+  &-large{
+    border-radius: $btn-border-radius;
+     > .#{$css-prefix}-btn{
+       @include btn-size($btn-padding-large, $btn-font-size-large, $btn-border-radius);
+     }
+  }
+
+  &-small{
+    border-radius: $btn-border-radius-small;
+    > .#{$css-prefix}-btn{
+      @include btn-size($btn-padding-small, $btn-font-size, $btn-border-radius-small);
+    }
+  }
+
+  &-radius-half {
+    > .#{$css-prefix}-btn{
+      &:first-child{
+        border-bottom-left-radius: $btn-circle-size;
+        border-top-left-radius: $btn-circle-size;
+      }
+      &:last-child{
+        border-top-right-radius: $btn-circle-size;
+        border-bottom-right-radius: $btn-circle-size;
+      }
+    }
+
+    @at-root (without: all) {.#{$css-prefix}-btn-group-large#{&}{
+      &:first-child{
+        border-bottom-left-radius: $btn-circle-size-large;
+        border-top-left-radius: $btn-circle-size-large;
+      }
+      &:last-child{
+        border-top-right-radius: $btn-circle-size-large;
+        border-bottom-right-radius: $btn-circle-size-large;
+      }
+    }}
+
+    @at-root (without: all) {.#{$css-prefix}-btn-group-small#{&}{
+      &:first-child{
+        border-bottom-left-radius: $btn-circle-size-small;
+        border-top-left-radius: $btn-circle-size-small;
+      }
+      &:last-child{
+        border-top-right-radius: $btn-circle-size-small;
+        border-bottom-right-radius: $btn-circle-size-small;
+      }
+    }}
+  }
+
+  &-radius-none#{&} {
+    > .#{$css-prefix}-btn{
+        border-radius: 0;
+    }
+  }
+
+}

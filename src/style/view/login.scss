@@ -1,0 +1,137 @@
+//.wrap{
+//  width: 1000px;
+//  margin: 0 auto;
+//}
+//
+//header{
+//  width: 100%;
+//  height: 107px;
+//}
+//header .logo{
+//  padding-top: 9px;
+//  display: inline-block;
+//}
+//header .web-link{
+//  float: right;
+//  height: 107px;
+//  line-height: 107px;
+//}
+//
+//section{
+//  width: 100%;
+//  height: 504px;
+//  background: url("../assets/images/login-bg.jpg") no-repeat center center;
+//  background-size: cover;
+//}
+//section .wrap{
+//  position: relative;
+//  height: 100%;
+//}
+//
+///*登录框样式*/
+//.login-form{
+//  width: 320px;
+//  position: absolute;
+//  height: 315px;
+//  z-index: 10;
+//
+//  opacity: 1;
+//  transform-origin: 50% 50% -300px;
+//  -webkit-transform-origin: 50% 50% -300px;
+//  -moz-transform-origin: 50% 50% -300px;
+//  -o-transform-origin: 50% 50% -300px;
+//  -ms-transform-origin: 50% 50% -300px;
+//}
+//.auto-login{
+//  width: 320px;
+//  position: absolute;
+//  height: 315px;
+//  z-index: 9;
+//
+//  transform: rotateY(180deg);
+//  -webkit-transform: rotateY(180deg);
+//  -moz-transform: rotateY(180deg);
+//  -o-transform: rotateY(180deg);
+//  -ms-transform: rotateY(180deg);
+//  opacity: 0;
+//  transform-origin: 50% 50% -300px;
+//  -webkit-transform-origin: 50% 50% -300px;
+//  -moz-transform-origin: 50% 50% -300px;
+//  -o-transform-origin: 50% 50% -300px;
+//  -ms-transform-origin: 50% 50% -300px;
+//
+//}
+//.login-box.auto .login-form{
+//  opacity: 0;
+//  transform: rotateY(180deg);
+//  -webkit-transform: rotateY(180deg);
+//  -moz-transform: rotateY(180deg);
+//  -o-transform: rotateY(180deg);
+//  -ms-transform: rotateY(180deg);
+//  transition: all 1s;
+//  -webkit-transition: all 1s;
+//  -moz-transition: all 1s;
+//  -o-transition: all 1s;
+//  -ms-transition: all 1s;
+//}
+//.login-box.auto .auto-login{
+//  z-index: 11;
+//  opacity: 1;
+//  transform: rotateY(360deg);
+//  -webkit-transform: rotateY(360deg);
+//  -moz-transform: rotateY(360deg);
+//  -o-transform: rotateY(360deg);
+//  -ms-transform: rotateY(360deg);
+//  transition: all 1s;
+//  -webkit-transition: all 1s;
+//  -moz-transition: all 1s;
+//  -o-transition: all 1s;
+//  -ms-transition: all 1s;
+//}
+//
+//.login-box.auto{
+//
+//}
+//.login-box{
+//  width: 320px;
+//  position: absolute;
+//  right: 30px;
+//  top: 50px;
+//  height: 315px;
+//}
+//.auto-login .login-tips{
+//  height: 152px;
+//}
+//
+//.form-header{
+//  height: 58px;
+//  padding: 20px 30px;
+//  font-size: 16px;
+//  font-weight: bold;
+//  border-top-left-radius: 5px;
+//  border-top-right-radius: 5px;
+//}
+//.form-body{
+//  padding: 40px 19px 30px;
+//  background-color: #fff;
+//  border-bottom-left-radius: 5px;
+//  border-bottom-right-radius: 5px;
+//}
+//.form-body .form-control{
+//  min-width: 280px;
+//}
+//.forget-link label{
+//  color: #777;
+//}
+//.forget-link a{
+//  float: right;
+//}
+//.btn-box{
+//  padding-top: 15px
+//}
+//.btn-box .btn{
+//  width: 100%;
+//  padding: 8px;
+//  letter-spacing: 0.5em;
+//  font-weight: bold;
+//}

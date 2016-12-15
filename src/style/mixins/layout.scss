@@ -1,0 +1,24 @@
+
+@mixin make-row($gutter: $grid-gutter-width){
+  @include clearfix;
+}
+
+@mixin make-col($i: 0){
+  @for $i from (1) through $grid-columns {
+    .#{$css-prefix}-col-#{$i} {
+      position: relative;
+      width: percentage(($i / $grid-columns));
+      min-height: 1px;
+      padding-left:  ($grid-gutter-width / 2);
+      padding-right: ($grid-gutter-width / 2);
+      float: left;
+    }
+  }
+}
+@mixin make-col-offset($i: 0){
+  @for $i from (1) through $grid-columns {
+    .#{$css-prefix}-offset-#{$i} {
+      margin-left: percentage(($i / $grid-columns));
+    }
+  }
+}

@@ -1,6 +1,6 @@
 {
   "name": "vue-design",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "title": "vue-design",
   "description": "A UI components Library with Vue.js for study",
   "homepage": "",
@@ -16,7 +16,7 @@
   "author": "404",
   "main": "dist/vue-design.js",
   "scripts": {
-    "dist:style": "node-sass --output-style compressed -o dist src/style/index.scss",
+    "dist:style": "node-sass --output-style compressed -o dist src/style/index.scss dist/vue-design.css",
     "dist:dev": "webpack --config build/build-dev.config.js",
     "dist:prod": "webpack --config build/build-prod.config.js",
     "dist": "npm run dist:style && npm run dist:dev && npm run dist:prod",

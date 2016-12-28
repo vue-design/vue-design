@@ -13,8 +13,8 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, '../dist'),
         publicPath: '/dist/',
-        filename: 'iview.min.js',
-        library: 'iview',
+        filename: 'vue-design.min.js',
+        library: 'vue-design',
         libraryTarget: 'umd',
         umdNamedDefine: true
     },

@@ -42,15 +42,18 @@ module.exports = {
             test: /\.css$/,
             loader: 'style!css!autoprefixer'
         }, {
-            test: /\.less$/,
-            loader: 'style!css!less'
+            test: /\.scss$/,
+            loader: ["style-loader", "css-loader", "sass-loader"]
         }, {
             test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/,
             loader: 'url?limit=8192'
         }, {
             test: /\.(html|tpl)$/,
             loader: 'vue-html'
-        }]
+        }],
+        sassLoader: {
+            includePaths: [path.resolve(__dirname, "../dist")]
+        }
     },
     plugins: [
         new webpack.DefinePlugin({

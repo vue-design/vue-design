@@ -1,4 +1,3 @@
 @import "./normalize.scss";
 @import "./base.scss";
-//scss编译时相对路径编译错误，故此处以编译后的输出目录作为相对目录
-@import "./common/fonts/iconfont.css";
+@import "./fonts/iconfont.css";

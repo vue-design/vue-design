@@ -17,6 +17,8 @@
   "main": "dist/vue-design.js",
   "scripts": {
     "dist:style": "node-sass --output-style compressed -o dist src/style/index.scss dist/vue-design.css",
+    "dist:style2": "webpack --config build/build-style-dev.config.js",
+    "dist:style3": "npm run dist:style2 && npm run dist:style",
     "dist:dev": "webpack --config build/build-dev.config.js",
     "dist:prod": "webpack --config build/build-prod.config.js",
     "dist": "npm run dist:style && npm run dist:dev && npm run dist:prod",

@@ -6,7 +6,7 @@
 
 const path = require('path');
 const webpack = require('webpack');
-//const scssPath = path.resolve(__dirname, "../dist/index.js");
+//const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -15,7 +15,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, '../dist/fonts'),
         publicPath: '/dist/',
-        filename: 'vue-design.css'
+        filename: 'vue-design.js'
     },
     resolve: {
         extensions: ['', '.scss', '.css']
@@ -25,16 +25,24 @@ module.exports = {
             {
                 test: /\.woff2?$|\.ttf$|\.eot$|\.svg$/,
                 loader: "file"
-            },
-            {
-                test: /\.css$/,
-                loader: 'style!css!autoprefixer'
-            }, {
-                test: /\.scss$/,
-                loader: "style-loader!css-loader!"
-            }]
+            }
+            //,
+            //{
+            //    test: /\.scss$/,
+            //    loader: "style-loader!css-loader!"
+            //}
+            //{
+            //    test: /\.css$/,
+            //    loader: 'style!css!autoprefixer'
+            //},
+            //{
+            //    test: /\.scss$/,
+            //    loader: "style-loader!css-loader!sass-loader!"
+            //}
+        ]
     },
     plugins: [
+        //new ExtractTextPlugin("../dist/[name].css?hash=[hash]",{ allChunks : true,resolve : ['modules'] }),
         new webpack.DefinePlugin({
             'process.env': {
                 NODE_ENV: '"development"'

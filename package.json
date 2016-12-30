@@ -16,9 +16,20 @@
   "author": "404",
   "main": "dist/vue-design.js",
   "scripts": {
+
+    "dist:style6": "mkdir -p dist dist/fonts",
+
+
+    "dist:style7": "mkdir -v -p dist/fonts",
+
+
+
+
     "dist:style": "node-sass --output-style compressed -o dist src/style/index.scss dist/vue-design.css",
-    "dist:style2": "webpack --config build/build-style-dev.config.js",
+    "dist:style2": "mkdir ./dist/fonts  cp -R ./src/style/common/fonts ./dist/",
+    "dist:style4": "robocopy -E ./src/style/common/fonts ./dist/",
     "dist:style3": "npm run dist:style2 && npm run dist:style",
+    "clean": "rimraf ./dist && mkdir dist",
     "dist:dev": "webpack --config build/build-dev.config.js",
     "dist:prod": "webpack --config build/build-prod.config.js",
     "dist": "npm run dist:style && npm run dist:dev && npm run dist:prod",

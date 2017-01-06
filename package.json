@@ -16,7 +16,7 @@
   "author": "404",
   "main": "dist/vue-design.js",
   "scripts": {
-    "style": "webpack --config build/build-style-dev.config.js",
+    "style": "webpack --config build/build-style.config.js",
     "dist:style": "node-sass --output-style compressed -o dist src/style/index.scss dist/vue-design.css",
     "clean": "rimraf ./dist",
     "dist:dev": "webpack --config build/build-dev.config.js",

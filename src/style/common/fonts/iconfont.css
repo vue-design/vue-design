@@ -1,10 +1,10 @@
 
 @font-face {font-family: "v-icon";
-  src: url('iconfont.eot?t=1481092102068'); /* IE9*/
-  src: url('iconfont.eot?t=1481092102068#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1481092102068') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1481092102068') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1481092102068#v-icon') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1486367171963'); /* IE9*/
+  src: url('iconfont.eot?t=1486367171963#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1486367171963') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1486367171963') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1486367171963#v-icon') format('svg'); /* iOS 4.1- */
 }
 
 .v-icon {
@@ -12,7 +12,6 @@
   font-size:16px;
   font-style:normal;
   -webkit-font-smoothing: antialiased;
-  -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
 }
 
@@ -22,7 +21,11 @@
 
 .icon-powerdown:before { content: "\e698"; }
 
+.icon-nocheckbox:before { content: "\e68a"; }
+
 .icon-flag:before { content: "\e6b8"; }
+
+.icon-checkbox:before { content: "\e608"; }
 
 .icon-up:before { content: "\e614"; }
 
@@ -35,6 +38,8 @@
 .icon-man:before { content: "\e684"; }
 
 .icon-filter:before { content: "\e659"; }
+
+.icon-notallcheck:before { content: "\e643"; }
 
 .icon-printer:before { content: "\e662"; }
 

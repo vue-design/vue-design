@@ -1,5 +1,5 @@
 
-import vButton from "./button.vue";
-import vButtonGroup from "./button-group";
+import Button from "./button.vue";
+import ButtonGroup from "./button-group";
 
-export { vButton, vButtonGroup } ;
+export { Button, ButtonGroup } ;

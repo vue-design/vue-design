@@ -1,5 +1,5 @@
 
-import vRow from "./row.vue";
-import vCol from "./col.vue";
+import Row from "./row.vue";
+import Col from "./col.vue";
 
-export { vRow, vCol };
+export { Row, Col };

@@ -1,22 +1,30 @@
 /**
  * Created by ty on 2016/10/30.
  */
-import {vCol,vRow} from "./components/layout";
+import Vue from "vue";
+import { Col as vCol, Row as vRow } from "./components/layout";
 import vIcon from "./components/icon";
-import { vButton, vButtonGroup }from "./components/button";
+import { Button as vButton, ButtonGroup as vButtonGroup } from "./components/button";
+import { Checkbox as vCheckbox, CheckboxGroup as vCheckboxGroup } from "./components/checkbox";
 
-const vueComponents = {
+const vueDesign = {
     vCol,
     vRow,
     vIcon,
     vButton,
-    vButtonGroup
+    vButtonGroup,
+    vCheckbox,
+    vCheckboxGroup
 };
 
-module.exports = {
-    install (Vue,opts = {}) {
-        Object.keys(vueComponents).forEach((name) => {
-            Vue.component(name,vueComponents[name]);
-        })
-    }
+const install = function (Vue, opts = {}) {
+    Object.keys(vueDesign).forEach((name) => {
+        Vue.component(name,vueDesign[name]);
+    });
 };
+
+if (typeof window !== 'undefined' && window.Vue) {
+    install(window.Vue);
+}
+
+module.exports = Object.assign(vueDesign, { install });
